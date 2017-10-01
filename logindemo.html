@@ -1,0 +1,35 @@
+<html>
+<head>
+
+</head>
+
+<body>
+    <div id="login">
+        <input type="text" id="username" placeholder="username">
+        <input type="password" placeholder="password">
+        <button onclick="save()">
+            Login
+        </button>
+    </div>
+    <script >
+            console.log("abc");
+            
+            if (!(localStorage.getItem("username") == null)) {
+                document.getElementById("login").innerHTML = localStorage.getItem("username")+"<button onclick="+"logout()"+">Logout</button>";
+              }
+        
+        function save(){
+            var x = document.getElementById("username").value;
+            localStorage.setItem("username", x);
+            location.reload();
+            
+        }
+        function logout(){
+            localStorage.removeItem("username");
+            console.log("clear");
+            location.reload();
+        }
+        </script>
+</body>
+
+</html>

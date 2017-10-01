@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="css/main.css">
+
+
+</head>
+<body style="background-color:#ff2a2a">
+
+<div class="jd">
+
+<div class="title">
+<div class="header" style="height:130px">
+	<div class="logo">
+		<img src="images\logo.jpg" style="height:85px; width:85px">
+	</div>
+
+	<div class="name">
+		<b>Townsville Music</b>
+	</div>
+
+	<div class="login" id="login">
+			<input type = "text" id = "username" value = "Login ID"size="12" /><br>
+			<input type = "password" id = "Password"size="12" /><br>
+			<button type="button" onclick="alert('Login Successfully')">Login</button>
+			<button type="button" onclick="save()">Sign Up</button>
+	</div>
+
+</div>
+</div>
+
+<div class="black">
+</div>
+
+<div id='cssmenu'>
+<ul>
+   <li><a href="index.html">Home</a></li>
+   <li ><a href="aboutus.html">About us</a></li>
+	 <li ><a href="events.html">Events and Mores</a></li>
+   <li><a href="bulletin.html">Bulletin</a></li>
+	 <li class="active"><a href="musicians.html">Musicians Area</a></li>
+	 <li ><a href="membersarea.html">Members Area</a></li>
+
+</ul>
+</div>
+
+
+<div class="info">
+<p><h4> We have performance opportunities
+available throughout 2017
+for local musicians and organisations.</h4></p>
+</div>
+
+<div class='container'>
+
+	<div >
+	<div style="float: left">
+		<img src="images\Camerata.jpg" style="height:200px; width:200px">
+	</div>
+	<div style="padding-left: 20%">
+	<p> <b>The Camerata Singers</b><br><br>
+		The concept of the Camerata Singers originated in the 1980s when Susan Grinsell, who was teaching voice at James Cook University realised that ensemble singing was sadly lacking for tertiary music students. Since then, Susan, along with repetiteur Carol Dallâ€™Osto, has strived to bring quality ensemble singing to the wider community by performing at events from the Ingham Italian Festival through to Cotterâ€™s Markets in the mall.
+
+		The Camerata Singers comprises a group of trained singers, both male and female, from age 18 and over who strive to provide quality performances in a range of styles from classical through to A cappella and contemporary. A number of members also regularly participate in local music theatre and theatre productions. For further information or bookings contact the Music Centre 4724 2086
+		or email admin@townsvillemusic.org.au
+			</p >
+	<div style="clear: left"></div>
+	</div>
+
+
+
+	</div>
+</div>
+
+<div id="footer">
+© All Rights are Reserved
+</div>
+</div>
+
+
+
+
+<script >
+	console.log("abc");
+
+	if (!(localStorage.getItem("username") == null)) {
+		docusment.getElementById("login").innerHTML ="<h3 style='color:#000000'>Welcome,"+ localStorage.getItem("username")+"</h3>"+"<button onclick="+"logout()"+">Logout</button>";
+	}
+
+function save(){
+	var x = document.getElementById("username").value;
+	localStorage.setItem("username", x);
+	location.reload();
+
+}
+function logout(){
+	localStorage.removeItem("username");
+	console.log("clear");
+	location.reload();
+}
+function btntest_onclick()
+{
+    window.location.href = "membersarea.html";
+}
+
+function myFunction() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+        x.className += " responsive";
+    } else {
+        x.className = "topnav";
+    }
+}
+</script>
+
+</body>
+</html>

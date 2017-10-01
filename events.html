@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="css/main.css">
+
+
+</head>
+<body style="background-color:#ff2a2a">
+
+<div class="jd">
+
+<div class="title">
+<div class="header" style="height:130px">
+	<div class="logo">
+		<img src="images\logo.jpg" style="height:85px; width:85px">
+	</div>
+
+	<div class="name">
+		<b>Townsville Music</b>
+	</div>
+
+	<div class="login" id="login">
+			<input type = "text" id = "username" value = "Login ID"size="12" /><br>
+			<input type = "password" id = "Password"size="12" /><br>
+			<button type="button" onclick="alert('Login Successfully')">Login</button>
+			<button type="button" onclick="save()">Sign Up</button>
+	</div>
+
+</div>
+</div>
+
+<div class="black">
+</div>
+
+<div id='cssmenu'>
+<ul>
+   <li><a href="index.html">Home</a></li>
+   <li ><a href="aboutus.html">About us</a></li>
+	 <li class="active"><a href="events.html">Events and Mores</a></li>
+   <li><a href="bulletin.html">Bulletin</a></li>
+	 <li><a href="musicians.html">Musicians Area</a></li>
+	 <li><a href="membersarea.html">Members Area</a></li>
+
+</ul>
+</div>
+
+<div class="container"><br><br>
+	<h2 style="color:#ff2a2a"><center><b>Upcoming Events</b></center></h2><br><br>
+
+		<div class="event">
+			<div class="eventimg">
+				<img src="images\a.jpg" style="height:150px;width:150px">
+			</div>
+			<div class="eventinfo">
+				<a href=""><p><b>SUNDAY VARIETY CONCERT</b></p></a>
+				<p>Presented by Friends of the Theatre<br>
+2pm Sunday 26 April at Pimlico Performing Arts Centre
+Fulham Road<br><br>
+Enquiries - please phone 4723 7879</p>
+			</div>
+		</div>
+
+		<div class="event">
+			<div class="eventimg">
+				<img src="images\b.jpg" style="height:150px;width:150px">
+			</div>
+			<div class="eventinfo">
+ 				<a href=""><p><b>Harbourside Duo presents Dream Serenade.</b></p></a>
+				<p>Music of Debussy, Ravel, Saint- Saens, Sibelius and others.March into Sommarhagen!
+				</p>
+			</div>
+		</div>
+
+		<div class="event">
+			<div class="eventimg">
+				<img src="images\c.png" style="height:150px;width:150px">
+			</div>
+			<div class="eventinfo">
+				<a href=""><p><b>Dance the Habanera
+with the Girl with Flaxen Hair! </b></p></a>
+				<p>Be seduced by Thais!
+Or just relax and let the music wash over you.
+2pm Sunday 17 May at C2 (Townsville Civic Theatre)
+
+				</p>
+			</div>
+		</div>
+
+		<div class="event">
+			<div class="eventimg">
+				<img src="images\d.png" style="height:150px;width:150px">
+			</div>
+			<div class="eventinfo">
+				<a href=""><p><b>Aviva String Quartet</b></p></a>
+				<p>Following the phenomenal success of their 2014 season, the superb foursome return with their first concert for 2015, bringing their signature style of classical and modern music to the masses in their own fresh and entertaining style.
+
+<br><br>Featuring
+Caroline Lloyd-Doolan on violin
+Susan Fraser on violin
+Jessica Winton on viola
+Ivy Wu on cello<br>
+ Ticketshop link	2pm Sunday 14 June at C2 (CivicTheatre building)
+<br>$25 Adult - $20 Concession - Children 12 and under free!
+
+
+				</p>
+			</div>
+		</div>
+
+		<div class="event">
+			<div class="eventimg">
+				<img src="images\logo.jpg" style="height:150px;width:150px">
+			</div>
+			<div class="eventinfo">
+				<a href=""><p><b>Townsville Concert Band </b></p></a>
+				<p>
+Pimlico choir
+Voices of Pimlico<br><br>
+2pm Sunday 6 September at C2 (Townsville Civic Theatre)
+				</p>
+			</div>
+		</div>
+
+		<div class="event">
+			<div class="eventimg">
+				<img src="images\logo.jpg" style="height:150px;width:150px">
+			</div>
+			<div class="eventinfo">
+				<a href=""><p><b>Townsville Concert Band </b></p></a>
+				<p>
+					2pm Sunday 27 September June at C2 (Townsville Civic Theatre)
+					Allegro Choir
+					<br>2pm Sunday 22 November at C2 (Townsville Civic Theatre)
+				</p>
+			</div>
+		</div>
+
+		<div class="event">
+			<div class="eventimg">
+				<img src="images\b.jpg" style="height:150px;width:150px">
+			</div>
+			<div class="eventinfo">
+				<a href=""><p><b>Aviva String Quartet  </b></p></a>
+				<p>
+					The superb foursome return with their final concert for 2015, bringing their signature style of classical and modern music to the masses in their own fresh and entertaining style.
+<br>featuring
+Caroline Lloyd-Doolan on violin
+Susan Fraser on violin
+Jessica Winton on viola
+Ivy Wu on cello
+<br>2pm Sunday 29 November at C2 (Townsville Civic Theatre)
+
+				</p>
+			</div>
+		</div>
+
+</div>
+</div>
+
+<div id="footer">
+© All Rights are Reserved
+</div>
+</div>
+
+
+
+
+<script>
+
+(function( $ ) {
+	$.sortByDate = function( elements, order ) {
+		var arr = [];
+		elements.each(function() {
+			var obj = {},
+				$el = $( this ),
+				time = $el.find( "time" ).text(),
+				date = new Date( $.trim( time ) ),
+				timestamp = date.getTime();
+
+				obj.html = $el[0].outerHTML;
+				obj.time = timestamp;
+
+				arr.push( obj );
+		});
+
+		var sorted = arr.sort(function( a, b ) {
+
+			if( order == "ASC" ) {
+				return a.time > b.time;
+			} else {
+				return b.time > a.time;
+			}
+
+		});
+
+		return sorted;
+	};
+
+	$(function() {
+		var $newer = $( "#newer" ),
+			$older = $( "#older" ),
+			$content = $( "#posts" ),
+			$elements = $( ".post" );
+
+			$newer.click(function() {
+				var elements = $.sortByDate( $elements, "DESC" );
+				var html = "";
+				for( var i = 0; i < elements.length; ++i ) {
+					html += elements[i].html;
+				}
+				$content[0].innerHTML = html;
+				$( this ).addClass( "selected" ).
+				siblings().
+				removeClass( "selected" );
+				return false;
+
+			});
+
+			$older.click(function() {
+				var elements = $.sortByDate( $elements, "ASC" );
+				var html = "";
+				for( var i = 0; i < elements.length; ++i ) {
+					html += elements[i].html;
+				}
+				$content[0].innerHTML = html;
+				$( this ).addClass( "selected" ).
+				siblings().
+				removeClass( "selected" );
+				return false;
+
+			});
+	});
+
+})( jQuery );
+
+</script>
+<script >
+	console.log("abc");
+
+	if (!(localStorage.getItem("username") == null)) {
+		document.getElementById("login").innerHTML ="<h3 style='color:#000000'>Welcome,"+ localStorage.getItem("username")+"</h3>"+"<button onclick="+"logout()"+">Logout</button>";
+	}
+
+function save(){
+	var x = document.getElementById("username").value;
+	localStorage.setItem("username", x);
+	location.reload();
+
+}
+function logout(){
+	localStorage.removeItem("username");
+	console.log("clear");
+	location.reload();
+}
+function btntest_onclick()
+{
+    window.location.href = "membersarea.html";
+}
+
+function myFunction() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+        x.className += " responsive";
+    } else {
+        x.className = "topnav";
+    }
+}
+</script>
+</body>
+</html>

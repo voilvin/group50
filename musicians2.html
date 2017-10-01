@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="css/main.css">
+
+
+</head>
+<body style="background-color:#ff2a2a">
+
+<div class="jd">
+
+<div class="title">
+<div class="header" style="height:130px">
+	<div class="logo">
+		<img src="images\logo.jpg" style="height:85px; width:85px">
+	</div>
+
+	<div class="name">
+		<b>Townsville Music</b>
+	</div>
+
+	<div class="login" id="login">
+			<input type = "text" id = "username" value = "Login ID"size="12" /><br>
+			<input type = "password" id = "Password"size="12" /><br>
+			<button type="button" onclick="alert('Login Successfully')">Login</button>
+			<button type="button" onclick="save()">Sign Up</button>
+	</div>
+
+</div>
+</div>
+
+<div class="black">
+</div>
+
+<div id='cssmenu'>
+<ul>
+   <li><a href="index.html">Home</a></li>
+   <li ><a href="aboutus.html">About us</a></li>
+	 <li ><a href="events.html">Events and Mores</a></li>
+   <li><a href="bulletin.html">Bulletin</a></li>
+	 <li class="active"><a href="musicians.html">Musicians Area</a></li>
+	 <li ><a href="membersarea.html">Members Area</a></li>
+
+</ul>
+</div>
+
+<div class="info">
+<p><h4> We have performance opportunities
+available throughout 2017
+for local musicians and organisations.</h4></p>
+</div>
+
+<div class='container'>
+
+	<div >
+	<div style="float: left">
+		<img src="images\Rosewood01.jpg" style="height:200px; width:200px">
+	</div>
+	<div style="padding-left: 20%" >
+	<p> <b>Rosewood</b><br><br>
+		Add some elegance to your next social event!
+		Have the Rosewood Guitar Quartet provide that special atmosphere by playing for your guests
+		Sample CD available on request
+		Phone: 0427 255 125
+		or email Joanne
+
+			</p >
+	<div style="clear: left"></div>
+	</div>
+
+
+
+	</div>
+</div>
+
+<div id="footer">
+© All Rights are Reserved
+</div>
+</div>
+
+
+
+
+<script >
+	console.log("abc");
+
+	if (!(localStorage.getItem("username") == null)) {
+		document.getElementById("login").innerHTML ="<h3 style='color:#000000'>Welcome,"+ localStorage.getItem("username")+"</h3>"+"<button onclick="+"logout()"+">Logout</button>";
+	}
+
+function save(){
+	var x = document.getElementById("username").value;
+	localStorage.setItem("username", x);
+	location.reload();
+
+}
+function logout(){
+	localStorage.removeItem("username");
+	console.log("clear");
+	location.reload();
+}
+function btntest_onclick()
+{
+    window.location.href = "membersarea.html";
+}
+
+function myFunction() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+        x.className += " responsive";
+    } else {
+        x.className = "topnav";
+    }
+}
+</script>
+
+</body>
+</html>

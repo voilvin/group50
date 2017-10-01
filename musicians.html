@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="css/main.css">
+
+
+</head>
+<body style="background-color:#ff2a2a">
+
+<div class="jd">
+
+<div class="title">
+<div class="header" style="height:130px">
+	<div class="logo">
+		<img src="images\logo.jpg" style="height:85px; width:85px">
+	</div>
+
+	<div class="name">
+		<b>Townsville Music</b>
+	</div>
+
+	<div class="login" id="login">
+			<input type = "text" id = "username" value = "Login ID"size="12" /><br>
+			<input type = "password" id = "Password"size="12" /><br>
+			<button type="button" onclick="alert('Login Successfully')">Login</button>
+			<button type="button" onclick="save()">Sign Up</button>
+	</div>
+
+</div>
+</div>
+
+<div class="black">
+</div>
+
+<div id='cssmenu'>
+<ul>
+   <li><a href="index.html">Home</a></li>
+   <li ><a href="aboutus.html">About us</a></li>
+	 <li ><a href="events.html">Events and Mores</a></li>
+   <li><a href="bulletin.html">Bulletin</a></li>
+	 <li class="active"><a href="musicians.html">Musicians Area</a></li>
+	 <li ><a href="membersarea.html">Members Area</a></li>
+
+</ul>
+</div>
+
+
+		<div id="wrapper" >
+			<div id="yourdiv" class="w3-panel w3-card">
+
+
+				<a href="musicians1.html" style="color: inherit" >
+
+					<img src="images/Camerata.jpg" style="float: left;padding-left: 10px" class="img-circle" height="100px" width="100px">
+						<div style="padding-left: 10px">
+							<b >Camerata</b>
+							<p >The band was well known back in 1990 .The name is beetles..</p>
+						</div>
+					<br style="clear: left">
+				</a>
+			</div>
+		</div>
+
+
+
+		<div id="wrapper" id="featured">
+			<div id="yourdiv" class="w3-panel w3-card">
+
+
+				<a href="musicians2.html" style="color: inherit" >
+
+					<img src="images/Rosewood01.jpg" style="float: left;padding-left: 10px" class="img-circle" height="100px" width="100px">
+						<div style="padding-left: 10px">
+							<b >Rosewood</b>
+							<p >The band was well known back in 1990 .The name is beetles..</p>
+						</div>
+					<br style="clear: left">
+				</a>
+			</div>
+		</div>
+
+		<div id="wrapper" >
+			<div id="yourdiv" class="w3-panel w3-card">
+
+
+				<a href="musicians3.html" style="color: inherit" >
+
+					<img src="images/Harbourside.jpg" style="float: left;padding-left: 10px" class="img-circle" height="100px" width="100px">
+						<div style="padding-left: 10px">
+							<b >Harbourside</b>
+							<p >The band was well known back in 1990 .The name is beetles..</p>
+						</div>
+					<br style="clear: left">
+				</a>
+			</div>
+		</div>
+
+		<div id="wrapper" >
+			<div id="yourdiv" class="w3-panel w3-card">
+
+
+				<a href="musicians4.html" style="color: inherit" >
+
+					<img src="images/DD600400.png" style="float: left;padding-left: 10px" class="img-circle" height="100px" width="100px">
+						<div style="padding-left: 10px">
+							<b >Dirty Dozon</b>
+							<p >The band was well known back in 1990 .The name is beetles..</p>
+						</div>
+					<br style="clear: left">
+				</a>
+			</div>
+		</div>
+
+<div id="footer">
+Copyright Received
+</div>
+</div>
+
+
+
+<script >
+	console.log("abc");
+
+	if (!(localStorage.getItem("username") == null)) {
+		document.getElementById("login").innerHTML ="<h3 style='color:#000000'>Welcome,"+ localStorage.getItem("username")+"</h3>"+"<button onclick="+"logout()"+">Logout</button>";
+	}
+
+function save(){
+	var x = document.getElementById("username").value;
+	localStorage.setItem("username", x);
+	location.reload();
+
+}
+function logout(){
+	localStorage.removeItem("username");
+	console.log("clear");
+	location.reload();
+}
+function btntest_onclick()
+{
+    window.location.href = "membersarea.html";
+}
+
+function myFunction() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+        x.className += " responsive";
+    } else {
+        x.className = "topnav";
+    }
+}
+</script>
+
+</body>
+</html>
